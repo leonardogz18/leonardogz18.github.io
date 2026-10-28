@@ -3,166 +3,229 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonardo | Data Analyst Portfolio</title>
-<meta name="description" content="Data analyst portfolio: UFC fight analysis with Python, pandas and plotly.">
+<title>Leonardo Guzmán | Data Analyst, BI &amp; Reporting</title>
+<meta name="description" content="Data Analyst with 5+ years in BI, reporting and data warehousing. SQL, Snowflake, Power BI, Tableau, Python.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #F2F4F1; --ink: #17211D; --muted: #55625C; --line: #CBD3CD;
-  --accent: #A8205A; --green: #2E6A4D; --card: #FAFBF9;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121A17; --ink: #E8EEEA; --muted: #9AA8A1; --line: #2C3A34;
-    --accent: #E0558F; --green: #6DBB93; --card: #18221E;
-  }
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font: 400 1.0625rem/1.65 "Public Sans", system-ui, sans-serif;
-}
-h1, h2, h3 { font-family: "Bricolage Grotesque", "Public Sans", system-ui, sans-serif; line-height: 1.1; margin: 0; }
-a { color: var(--accent); text-underline-offset: 3px; }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-.wrap { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
-header.top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; font-weight: 500; }
-header.top nav { display: flex; gap: 1.5rem; }
-header.top a { color: var(--ink); text-decoration: none; }
-header.top a:hover { color: var(--accent); }
-.hero { padding: 4.5rem 0 3.5rem; }
-.hero h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 800; letter-spacing: -0.03em; }
-.hero p.lead { font-size: 1.35rem; max-width: 34ch; margin: 1.25rem 0 0; color: var(--muted); }
-.hero .links { margin-top: 1.75rem; display: flex; gap: 1.5rem; flex-wrap: wrap; font-weight: 600; }
-section { padding: 3rem 0; border-top: 1px solid var(--line); }
-section h2 { font-size: 1.9rem; font-weight: 700; margin-bottom: 1.25rem; }
-section p { max-width: 62ch; margin: 0 0 1rem; }
-.project h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: .75rem; }
-.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.25rem; padding: 0; list-style: none; }
-.tags li { border: 1px solid var(--line); border-radius: 999px; padding: .15rem .8rem; font-size: .9rem; color: var(--muted); }
-
-/* Tale of the tape: the one memorable element */
-.tape { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1.5rem; margin: 1.75rem 0; }
-.tape-head { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 1rem; margin-bottom: 1.25rem; }
-.tape-head h4 { margin: 0; font: 700 1.5rem "Bricolage Grotesque", sans-serif; }
-.tape-head .l { color: var(--green); }
-.tape-head .r { color: var(--accent); text-align: right; }
-.tape-head .vs { color: var(--muted); font-size: .95rem; }
-.row { display: grid; grid-template-columns: 1fr 9.5rem 1fr; align-items: center; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--line); }
-.row .name { text-align: center; color: var(--muted); font-size: .95rem; line-height: 1.3; }
-.side { display: flex; align-items: center; gap: .6rem; }
-.side.right { flex-direction: row-reverse; }
-.side b { font: 700 1.35rem "Bricolage Grotesque", sans-serif; min-width: 3.4rem; }
-.side.right b { text-align: right; }
-.bar { height: 10px; border-radius: 5px; flex: none; }
-.side.left .bar { background: var(--green); }
-.side.right .bar { background: var(--accent); }
-.tape small { display: block; margin-top: .9rem; color: var(--muted); font-size: .85rem; }
-@media (max-width: 640px) {
-  .row { grid-template-columns: 1fr 1fr; }
-  .row .name { grid-column: 1 / -1; order: -1; text-align: left; }
-  .tape-head { grid-template-columns: 1fr 1fr; }
-  .tape-head .vs { display: none; }
-}
-
-ul.findings { padding-left: 1.2rem; max-width: 62ch; margin: 0 0 1.5rem; }
-ul.findings li { margin-bottom: .5rem; }
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem 2rem; }
-.skills h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .3rem; }
-.skills p { margin: 0; color: var(--muted); }
-footer { padding: 2.5rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+:root{--bg:#0E1512;--ink:#E8EEEA;--muted:#A3B1AA;--line:rgba(255,255,255,.12);--accent:#E0558F;--green:#6DBB93;--card:rgba(20,31,27,.78)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:radial-gradient(ellipse at 20% 0%,#16251F 0%,var(--bg) 60%);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+nav.bar{position:sticky;top:0;z-index:5;background:rgba(14,21,18,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:3.6rem;gap:1rem}
+nav.bar strong{font-family:"Bricolage Grotesque",sans-serif;white-space:nowrap}
+nav.bar ul{display:flex;gap:1.2rem;margin:0;padding:0;list-style:none;overflow-x:auto}
+nav.bar a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500;white-space:nowrap}
+nav.bar a:hover{color:var(--ink)}
+.hero{padding:5.5rem 0 3rem}
+.hero .role{color:var(--green);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.9rem;margin:0 0 1rem}
+.hero h1{font-size:clamp(2.8rem,9vw,5.5rem);font-weight:800;letter-spacing:-.03em}
+.hero .lead{font-size:1.25rem;max-width:44ch;color:var(--muted);margin:1.25rem 0 0}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.75rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#16090F}
+.btn:hover{border-color:var(--accent)}
+button.btn{background:none;font:inherit;font-weight:600;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:2.5rem 0 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.2rem}
+.stat b{display:block;font:800 1.9rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.stat span{color:var(--muted);font-size:.92rem;line-height:1.35;display:block}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section h2{font-size:2rem;font-weight:700;margin-bottom:1.5rem}
+section p{max-width:64ch;margin:0 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.3rem}
+.card h3{font-size:1.05rem;color:var(--green);margin-bottom:.45rem}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.1rem .75rem;font-size:.88rem;color:var(--muted)}
+.proj h3{font:700 1.5rem "Bricolage Grotesque",sans-serif;color:var(--ink);margin-bottom:.7rem}
+.proj ul{padding-left:1.2rem;color:var(--muted);margin:0 0 1.2rem}
+.proj li{margin-bottom:.4rem}
+.proj .btns{margin-top:0}
+.job{display:grid;grid-template-columns:9.5rem 1fr;gap:1.25rem;padding:1.25rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job .when{color:var(--muted);font-size:.92rem;padding-top:.2rem}
+.job h3{font:700 1.15rem "Bricolage Grotesque",sans-serif;margin-bottom:.35rem}
+.job h3 span{color:var(--green)}
+.job p{margin:0 0 .35rem;color:var(--muted);font-size:.98rem}
+@media(max-width:640px){.job{grid-template-columns:1fr;gap:.2rem}nav.bar strong{display:none}}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<canvas id="bg" aria-hidden="true"></canvas>
 
-<header class="top">
-  <strong>Leonardo</strong>
-  <nav aria-label="Main">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<nav class="bar" aria-label="Main"><div class="wrap">
+  <strong>Leonardo Guzmán</strong>
+  <ul>
+    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
 
-<main>
+<main class="wrap">
 <div class="hero">
-  <h1>Leonardo</h1>
-  <p class="lead">Data analyst who likes working with new data and explaining what it shows.</p>
-  <div class="links">
-    <a href="#projects">See my project</a>
-    <a href="https://github.com/leonardogz18">GitHub</a>
-    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+  <p class="role">Data Analyst | BI &amp; Reporting</p>
+  <h1>Leonardo Guzmán</h1>
+  <p class="lead">I turn messy data into dashboards, pipelines and reports that teams can trust, across finance, energy, education and the public sector.</p>
+  <div class="btns">
+    <a class="btn main" href="#projects">See my project</a>
+    <a class="btn" href="https://github.com/leonardogz18" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>5+ years</b><span>in BI, reporting and data warehousing</span></div>
+    <div class="stat"><b>16 h → 20 min</b><span>credit-scoring processing time after a SQL-to-C# migration</span></div>
+    <div class="stat"><b>Millions</b><span>of records validated in a SQL-to-Snowflake migration</span></div>
+    <div class="stat"><b>+11% / +12%</b><span>better risk identification and prediction accuracy in credit models</span></div>
   </div>
 </div>
 
 <section id="about">
   <h2>About</h2>
-  <p>I’m a data analyst in training, and I learn best by picking questions I actually care about. Away from the data I follow MMA, grow carnivorous plants and dahlias, and play in a university musical group (a tuna).</p>
-  <p>My first portfolio project came from the MMA side: what 7,000+ UFC fights say about how fights end.</p>
-</section>
-
-<section id="projects" class="project">
-  <h2>Project</h2>
-  <h3>Tap or Knockout? What weight class says about how UFC fights end</h3>
-  <ul class="tags" aria-label="Tools used">
-    <li>Python</li><li>pandas</li><li>seaborn</li><li>plotly</li><li>Jupyter</li>
-  </ul>
-  <p>I analyzed 7,177 UFC fights (2010 to 2026) to find out how fights end, which submissions dominate, and how weight class changes the finish.</p>
-
-  <div class="tape" role="group" aria-label="Flyweight compared with heavyweight">
-    <div class="tape-head">
-      <h4 class="l">Flyweight</h4>
-      <span class="vs">tale of the tape</span>
-      <h4 class="r">Heavyweight</h4>
-    </div>
-    <div class="row">
-      <div class="side left"><b>19%</b><span class="bar" style="width:76px"></span></div>
-      <div class="name">Fights ending in a submission</div>
-      <div class="side right"><b>12%</b><span class="bar" style="width:48px"></span></div>
-    </div>
-    <div class="row">
-      <div class="side left"><b>0.7</b><span class="bar" style="width:84px"></span></div>
-      <div class="name">Average submission attempts</div>
-      <div class="side right"><b>0.3</b><span class="bar" style="width:36px"></span></div>
-    </div>
-    <div class="row">
-      <div class="side left"><b>23.5%</b><span class="bar" style="width:94px"></span></div>
-      <div class="name">Fights ending in a KO/TKO</div>
-      <div class="side right"><b>49.2%</b><span class="bar" style="width:197px"></span></div>
-    </div>
-    <small>Bars are drawn to scale within each row.</small>
-  </div>
-
-  <ul class="findings">
-    <li>Submissions end about 18% of fights, and the rear-naked choke alone accounts for over 40% of them.</li>
-    <li>Lighter fighters attempt more submissions, and heavyweights finish by knockout almost twice as often as flyweights.</li>
-    <li>The submission rate has stayed between roughly 15% and 20% every year since 2011.</li>
-  </ul>
-  <p><a href="https://github.com/leonardogz18/ufc-finishes-analysis">Read the full analysis on GitHub</a></p>
+  <p>Data Analyst with 5+ years of experience in BI, reporting and data warehousing across finance, energy, education and the public sector. My background in machine learning and credit risk (M.Sc. in Computer Science) gives me a strong foundation in modeling and data quality.</p>
+  <p>I work mainly with SQL, Python, Snowflake, Power BI and Tableau. Highlights include validating a Snowflake migration of millions of records and replacing manual Excel workflows with automated pipelines and dashboards. Based in Peru, I’m available on US Eastern hours for remote contract roles.</p>
+  <p>Outside work, I train MMA and grow carnivorous and aquatic plants. My interest in MMA led to the UFC project below.</p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="skills">
-    <div><h3>Analysis</h3><p>Python, pandas, NumPy, data cleaning, exploratory analysis</p></div>
-    <div><h3>Visualization</h3><p>seaborn, matplotlib, plotly (interactive charts)</p></div>
-    <div><h3>Workflow</h3><p>Jupyter, Git and GitHub, reusable helper modules</p></div>
+  <div class="grid">
+    <div class="card"><h3>BI &amp; Reporting</h3><p>Power BI, Tableau, Microsoft Report Builder, Excel (DAX)</p></div>
+    <div class="card"><h3>Databases &amp; Warehousing</h3><p>SQL, T-SQL, Snowflake, data modeling</p></div>
+    <div class="card"><h3>Big Data</h3><p>Apache Spark, PySpark, Spark SQL</p></div>
+    <div class="card"><h3>Programming &amp; ML</h3><p>Python (pandas, scikit-learn), C#, C++, Git</p></div>
+    <div class="card"><h3>Data Work</h3><p>ETL pipelines, data validation, data wrangling, workflow automation, predictive modeling</p></div>
+    <div class="card"><h3>Cloud &amp; Methods</h3><p>AWS and Azure (foundational), Agile, Scrum</p></div>
   </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card proj">
+    <h3>Tap or Knockout? How UFC fights end, by weight class</h3>
+    <ul class="tags" aria-label="Tools used"><li>Python</li><li>pandas</li><li>plotly</li><li>Tableau Public</li><li>Jupyter</li></ul>
+    <p>An analysis of UFC fights (2011 to 2025) on how fights end, which submissions dominate, and how weight class shapes the finish, with a written case study and an interactive dashboard.</p>
+    <ul>
+      <li>Submissions end about 18% of fights, and the rear-naked choke alone is over 40% of them.</li>
+      <li>Heavyweights finish by KO/TKO almost twice as often as flyweights (49.2% vs 23.5%).</li>
+      <li>The submission rate has stayed between roughly 15% and 20% every year since 2011.</li>
+    </ul>
+    <div class="btns">
+      <a class="btn main" href="https://github.com/leonardogz18/ufc-finishes-analysis" target="_blank" rel="noopener noreferrer">Case study on GitHub</a>
+      <a class="btn" href="https://public.tableau.com/app/profile/leonardo.guzman1143/viz/UFC_17931496524890/UFCFINISHES" target="_blank" rel="noopener noreferrer">Interactive dashboard</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <article class="job"><div class="when">2025 – Present</div><div><h3>Professional Development</h3><p>Google Data Analytics Professional Certificate (in progress), plus courses in big data, BI tools and cloud data platforms.</p></div></article>
+  <article class="job"><div class="when">Oct 2024 – Feb 2025</div><div><h3>Data Analyst <span>· InnovarITP</span></h3><p>Built about 20 dashboards and reports in Power BI and Report Builder on platform usage, student performance and learning trends for thousands of students.</p><p>Used SQL on large datasets to deliver insights to educators and stakeholders.</p></div></article>
+  <article class="job"><div class="when">May 2024 – Sep 2024</div><div><h3>Data Analyst <span>· Pockit</span></h3><p>Developed about 30 Report Builder reports for finance and management to monitor transactions and fund usage, enabling immediate detection of errors.</p><p>Designed and optimized SQL queries; supported data warehouse reporting through modeling and integration.</p></div></article>
+  <article class="job"><div class="when">May 2023 – Apr 2024</div><div><h3>Data Analyst <span>· Provista Software Corporation</span></h3><p>Led data validation and quality checks for a migration of millions of voter, petition and location records for a US state from SQL systems to Snowflake.</p><p>Organized warehouse tables so reports could access data faster; built Tableau and Report Builder dashboards.</p></div></article>
+  <article class="job"><div class="when">Mar 2023 – Dec 2024</div><div><h3>Lecturer (part-time) <span>· Universidad La Salle</span></h3><p>Taught Programming Languages and Data Structures; designed course materials, assignments and evaluations.</p></div></article>
+  <article class="job"><div class="when">Jun 2022 – Apr 2023</div><div><h3>Data Analyst <span>· Conexiona</span></h3><p>Replaced Excel-based analysis with an automated workflow for two years of hourly, per-device electricity data from about 100 households.</p><p>Built about 10 Power BI dashboards and static charts for the yearly report.</p></div></article>
+  <article class="job"><div class="when">Mar 2021 – May 2022</div><div><h3>C# Developer <span>· CreditoReal</span></h3><p>Migrated SQL processes into C# for credit scoring, cutting processing time from 16 hours to 20 minutes.</p></div></article>
+  <article class="job"><div class="when">Mar 2020 – Feb 2021</div><div><h3>Data Scientist <span>· InnovarITP</span></h3><p>Cleaned and analyzed large datasets for credit scoring; built ML models that improved identification of high-risk borrowers by 11%.</p></div></article>
+  <article class="job"><div class="when">Oct 2019 – Feb 2020</div><div><h3>Data Scientist <span>· Tecno Creditos S.A.C. (Apurata)</span></h3><p>Detected outliers and improved data quality for credit scoring; led modeling end to end, increasing risk prediction accuracy by 12%.</p></div></article>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <article class="job"><div class="when">2018</div><div><h3>M.Sc. in Computer Science</h3><p>Universidad Católica San Pablo (full scholarship)</p></div></article>
+  <article class="job"><div class="when">Jan – Apr 2018</div><div><h3>Research Internship, Machine Learning &amp; Data Mining</h3><p>Polytech Nice Sophia, France (scholarship)</p></div></article>
+  <article class="job"><div class="when">2016</div><div><h3>B.Sc. in Computer Science</h3><p>Universidad Nacional de San Agustín</p></div></article>
+  <article class="job"><div class="when">Languages</div><div><h3>Spanish (native), English (C1)</h3><p>Certificate of Proficiency</p></div></article>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Have a role, a dataset or a question? <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p>
+  <p>Open to remote contract roles on US Eastern hours. The quickest way to reach me is email.</p>
+  <div class="btns">
+    <a class="btn main" href="mailto:leonardogz18@gmail.com">leonardogz18@gmail.com</a>
+    <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;to=leonardogz18@gmail.com&amp;su=Hello%20Leonardo" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+    <button class="btn" id="copy" type="button">Copy address</button>
+    <a class="btn" href="https://github.com/leonardogz18" target="_blank" rel="noopener noreferrer">github.com/leonardogz18</a>
+  </div>
 </section>
 </main>
 
-<footer>© 2026 Leonardo</footer>
-</div>
+<footer><div class="wrap">© 2026 Leonardo Guzmán</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  var canvas = document.getElementById('bg');
+  if (!window.THREE || !canvas) return;
+  try {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 200);
+    camera.position.z = 30;
+
+    function layer(count, color, size) {
+      var arr = new Float32Array(count * 3);
+      for (var i = 0; i < arr.length; i++) arr[i] = (Math.random() - 0.5) * 90;
+      var geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+      var pts = new THREE.Points(geo, new THREE.PointsMaterial({ color: color, size: size, transparent: true, opacity: 0.65 }));
+      scene.add(pts);
+      return pts;
+    }
+    var a = layer(650, 0xE0558F, 0.2);
+    var b = layer(450, 0x6DBB93, 0.17);
+
+    function resize() {
+      var w = window.innerWidth, h = window.innerHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    var mx = 0, my = 0;
+    window.addEventListener('mousemove', function (e) {
+      mx = (e.clientX / window.innerWidth - 0.5) * 2;
+      my = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    function frame() {
+      a.rotation.y += 0.0007; a.rotation.x += 0.0002;
+      b.rotation.y -= 0.0005; b.rotation.z += 0.0002;
+      camera.position.x += (mx * 3 - camera.position.x) * 0.02;
+      camera.position.y += (-my * 3 - camera.position.y) * 0.02;
+      camera.lookAt(scene.position);
+      renderer.render(scene, camera);
+      requestAnimationFrame(frame);
+    }
+    if (reduce) { renderer.render(scene, camera); } else { frame(); }
+  } catch (err) { /* page still works without the background */ }
+})();
+</script>
+<script>
+(function () {
+  var b = document.getElementById('copy');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var t = 'leonardogz18@gmail.com';
+    var done = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy address'; }, 2500); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () { b.textContent = t; }); }
+    else { b.textContent = t; }
+  });
+})();
+</script>
 </body>
 </html>
